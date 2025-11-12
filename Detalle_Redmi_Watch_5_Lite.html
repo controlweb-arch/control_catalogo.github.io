@@ -94,7 +94,7 @@
 
                     <!-- NUEVO BOTÓN: WhatsApp -->
                     <a 
-                        href="https://wa.me/59898441360?text=Hola%20estoy%20interesado%2Fda%20en%20el%20Reloj%20Redmi%20Watch5%20(U%24S%20154)" 
+                        href="https://wa.me/59898441360?text=Hola%20estoy%20interesado%2Fda%20en%20el%20reloj%20Redmi%20watch%205%20(U%24S%20154)" 
                         target="_blank" 
                         class="whatsapp-link-large"
                     >
@@ -103,7 +103,7 @@
                         Consultar por WhatsApp
                     </a>
                 </div>
-                 
+                
                 <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
                     <h3>Características Destacadas</h3>
                     <ul>
@@ -119,12 +119,23 @@
         <!-- Puedes añadir una sección para productos relacionados aquí si lo deseas -->
 
     </div>
-
+    <div id="compraModal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>¡Atención! Redirección Externa</h2>
+            <p>Estás a punto de ser redirigido a la plataforma de pago segura de **Mercado Pago** para finalizar tu compra.</p>
+            <p>Pulsa "Confirmar" para continuar o "Cancelar" para volver a los detalles del producto.</p>
+            <div class="modal-buttons">
+                <button id="cancelarBtn" onclick="ocultarAdvertencia()">Cancelar</button>
+                <button id="confirmarBtn">Confirmar</button>
+            </div>
+        </div>
+    </div>    
     <footer>
         <p>&copy; Catálogo 2025. Todos los derechos reservados.</p>
     </footer>
-<script src="../Proyecto/js/script_detalle.js"></script>
+<script src="./js/script_detalle.js"></script>
 </body>
 
 </html>
+
 
