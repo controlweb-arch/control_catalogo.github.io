@@ -72,9 +72,30 @@
                     <span class="price-label">Precio Único:</span>
                     <span class="product-price">U$S 154</span>
                 </p>
+<!-- CONTENEDOR DE BOTONES (NUEVO: Agrupa Comprar y WhatsApp) -->
+                <div class="action-buttons-container">
+                    
+                    <!-- Botón de Comprar (Mercado Pago) -->
+                    <a 
+                        href="#" 
+                        id="botonComprar" 
+                        class="add-to-cart-large" 
+                        data-mp-link="http://www.mercadopago.com.uy/"
+                    >
+                        Comprar 
+                    </a>
 
-                <!-- Botón de acción principal: "Comprar ahora" o similar -->
-                <a href="http://www.mercadopago.com.uy" class="add-to-cart-large">Comprar </a>
+                    <!-- NUEVO BOTÓN: WhatsApp -->
+                    <a 
+                        href="https://wa.me/59898441360?text=Hola%20estoy%20interesado%2Fda%20en%20el%20Samsung%20Galaxy%20A05%20(U%24S%20154)" 
+                        target="_blank" 
+                        class="whatsapp-link-large"
+                    >
+                        <!-- Usamos un SVG como ícono de WhatsApp -->
+                        <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 0C5.405 0 0 5.405 0 12.031c0 2.21 0.58 4.316 1.637 6.138L0 24l5.967-1.579c1.789 0.982 3.82 1.547 5.964 1.547 6.626 0 12.031-5.405 12.031-12.031C24.031 5.405 18.626 0 12.031 0zm5.95 15.655c-0.286 0.169-1.678 0.82-1.942 0.916-0.264 0.096-0.548 0.144-0.831 0.048-0.347-0.106-1.325-0.485-2.522-1.558-1.197-1.07-1.996-2.55-2.23-2.946-0.234-0.395-0.038-0.613 0.169-0.819s0.463-0.485 0.697-0.72c0.234-0.234 0.312-0.395 0.479-0.659 0.166-0.264 0.083-0.498-0.038-0.697s-0.831-2.007-1.137-2.748c-0.306-0.741-0.613-0.635-0.831-0.647-0.218-0.012-0.479-0.012-0.741-0.012s-0.741 0.096-1.137 0.485c-0.395 0.389-1.503 1.459-1.503 3.551 0 2.091 1.531 4.103 1.749 4.389s2.985 4.671 7.218 6.551c4.233 1.88 4.233 1.253 4.471 1.171 0.237-0.082 1.346-0.548 1.531-1.07s0.199-0.985 0.14-1.072c-0.06-0.087-0.222-0.134-0.463-0.253z"/></svg>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
                 
                 <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
                     <h3>Características Destacadas</h3>
@@ -91,11 +112,22 @@
         <!-- Puedes añadir una sección para productos relacionados aquí si lo deseas -->
 
     </div>
-
+    <div id="compraModal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>¡Atención! Redirección Externa</h2>
+            <p>Estás a punto de ser redirigido a la plataforma de pago segura de **Mercado Pago** para finalizar tu compra.</p>
+            <p>Pulsa "Confirmar" para continuar o "Cancelar" para volver a los detalles del producto.</p>
+            <div class="modal-buttons">
+                <button id="cancelarBtn" onclick="ocultarAdvertencia()">Cancelar</button>
+                <button id="confirmarBtn">Confirmar</button>
+            </div>
+        </div>
+    </div>    
     <footer>
         <p>&copy; Catálogo 2025. Todos los derechos reservados.</p>
     </footer>
-
+<script src="./js/script_detalle.js"></script>
 </body>
 
 </html>
+
